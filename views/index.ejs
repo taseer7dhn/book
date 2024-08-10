@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Books</title>
+    <!-- There is no need to use ../  before main.css -->
+    <link rel="stylesheet"type="text/css" href="style/main.css">
+</head>
+<body>
+   
+    <div class="top">
+        <h1 class="heading1">Search Books</h1>
+    </div>
+    
+    <div class="details">
+        <% if (locals.datas){%>
+            <p class="detail">Book Name:<%=datas.title  %></p>
+            <p class="detail"> Author: <%=datas.author_name%> </p>
+           <p class="detail">First Publish Year : <%=datas.first_publish_year  %>     </p>
+           <p class="detail">First Sentence: <%=datas.first_sentence %>     </p>
+           <p class="detail">Ebook Access : <%=datas.ebook_access  %>     </p>
+           <p class="detail">Average Rating : <%=datas.ratings_average  %>     </p>
+           <p class="detail">Suggested Title : <%=datas.title_suggest  %>     </p>
+          <% } else{ %>
+          <p>Nothing to show</p>
+           <%} %>
+    </div>
+   <div>
+    <form action="/" method="get">
+        <input class="refresh" type="image" src="https://tse1.mm.bing.net/th?id=OIP.0bUNFDmV7f5jNb57ZzqxlgHaHa&pid=Api&rs=1&c=1&qlt=95&w=123&h=123"  alt="refresh">
+    </form>
+   
+   </div>
+</body>
+</html>
